@@ -39,7 +39,7 @@ namespace WpfApp1
                 FirstName = fNameTextBox.Text,
                 MiddleName = mNameTextBox.Text,
                 LastName = lNameTextBox.Text,
-                DealShare = Convert.ToInt32(dShareTextBox.Text)
+                DealShare = Convert.ToInt32(dShareTextBox.Text),
             };
             App.DB.agents.Add(agent);
             App.DB.SaveChanges();

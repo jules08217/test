@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище PodgotovkaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Podgotovka.dbo.agents" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="agents">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="MiddleName" />
+      <PropertyRef Name="LastName" />
+      <PropertyRef Name="DealShare" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DealShare" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Хранилище PodgotovkaModelContainer">
+    <EntitySet Name="agents" EntityType="Self.agents" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [agents].[Id] AS [Id], 
+    [agents].[FirstName] AS [FirstName], 
+    [agents].[MiddleName] AS [MiddleName], 
+    [agents].[LastName] AS [LastName], 
+    [agents].[DealShare] AS [DealShare]
+    FROM [dbo].[agents] AS [agents]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
