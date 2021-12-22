@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="385" Margin="22,10,0,0" VerticalAlignment="Top" Width="521">
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="344" Margin="22,10,0,0" VerticalAlignment="Top" Width="570">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" >
@@ -17,18 +17,18 @@
                             <TextBlock Text="{Binding LastName}" Width="100"></TextBlock>
                             <TextBlock Text="{Binding DealShare}" Width="50"></TextBlock>
                         </StackPanel>
-                        <Button x:Name="DeleteButton" Content="Удалить" Width="70" Margin="0,0,10,0"></Button>
-                        <Button x:Name="ChangeButton" Content="Изменить" Width="70"></Button>
+                        <Button x:Name="DeleteButton" Content="Удалить" Width="70" Margin="0,0,10,0" Click="DeleteButton_Click"></Button>
+                        <Button x:Name="ChangeButton" Content="Изменить" Width="70" Click="ChangeButton_Click"></Button>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <TextBox x:Name="fNameTextBox" HorizontalAlignment="Left" Height="23" Margin="569,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
-        <TextBox x:Name="mNameTextBox" HorizontalAlignment="Left" Height="23" Margin="569,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
-        <TextBox x:Name="lNameTextBox" HorizontalAlignment="Left" Height="23" Margin="569,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
-        <TextBox x:Name="dShareTextBox" HorizontalAlignment="Left" Height="23" Margin="569,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
-        <Button x:Name="AddButton" Content="Добавить" HorizontalAlignment="Left" Margin="635,265,0,0" VerticalAlignment="Top" Width="75" Click="AddButton_Click"/>
-        <Button x:Name="SaveButton" Content="Сохранить" HorizontalAlignment="Left" Margin="635,308,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="fNameTextBox" HorizontalAlignment="Left" Height="23" Margin="615,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="mNameTextBox" HorizontalAlignment="Left" Height="23" Margin="615,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="lNameTextBox" HorizontalAlignment="Left" Height="23" Margin="615,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="dShareTextBox" HorizontalAlignment="Left" Height="23" Margin="615,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <Button x:Name="AddButton" Content="Добавить" HorizontalAlignment="Left" Margin="102,374,0,0" VerticalAlignment="Top" Width="75" Click="AddButton_Click"/>
+        <Button x:Name="SaveButton" Content="Сохранить" HorizontalAlignment="Left" Margin="435,374,0,0" VerticalAlignment="Top" Width="75" Click="SaveButton_Click"/>
 
     </Grid>
 </Window>

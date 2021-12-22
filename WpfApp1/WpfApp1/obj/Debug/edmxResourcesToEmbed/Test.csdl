@@ -3,10 +3,6 @@
   <EntityType Name="agents">
     <Key>
       <PropertyRef Name="Id" />
-      <PropertyRef Name="FirstName" />
-      <PropertyRef Name="MiddleName" />
-      <PropertyRef Name="LastName" />
-      <PropertyRef Name="DealShare" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
